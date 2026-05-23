@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\Desktop\\\\Projects\\\\mesenger\" -Recurse -Depth 3)",
+      "Bash(ls -la \"c:/Users/$\\(whoami\\)/Desktop/Projects/mesenger/\" 2>/dev/null || ls -la /mnt/c/Users/*/Desktop/Projects/mesenger/ 2>/dev/null || echo \"Trying direct path...\" && pwd)",
+      "Read(//mnt/c/**)",
+      "Bash(node -e \"const express = require\\('express'\\); const app = express\\(\\); app.use\\(express.json\\(\\)\\); app.post\\('/test', \\(req, res\\) => { console.log\\('body:', typeof req.body, req.body\\); res.json\\({ ok: true }\\); }\\); const server = app.listen\\(3001\\); const http = require\\('http'\\); const data = JSON.stringify\\({name:'test'}\\); const req = http.request\\({hostname:'localhost',port:3001,path:'/test',method:'POST',headers:{'Content-Type':'application/json','Content-Length':data.length}}, \\(res\\) => { let body=''; res.on\\('data',c=>body+=c\\); res.on\\('end',\\(\\)=>{console.log\\('response:',body\\); server.close\\(\\)}\\) }\\); req.write\\(data\\); req.end\\(\\);\")",
+      "Bash(node -e \"console.log\\(require\\('router/package.json'\\).version\\)\")",
+      "Bash(node -e \"console.log\\(require\\('express/node_modules/router/package.json'\\).version\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(node -e \"const m = require\\('./src/data/users.data'\\); console.log\\(Object.keys\\(m\\)\\); console.log\\(typeof m.readUsers\\)\")",
+      "Bash(node -e \"const m = require\\('./src/data/users.data'\\); console.log\\(Object.keys\\(m\\)\\); console.log\\(typeof m.readUsers, typeof m.writeUsers\\)\")",
+      "Bash(npm install *)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Desktop\\Projects\\mesenger\\src\\controllers",
+      "c:\\Users\\Desktop\\Projects\\mesenger\\src\\services",
+      "c:\\Users\\Desktop\\Projects\\mesenger\\src\\routes",
+      "c:\\Users\\Desktop\\Projects\\mesenger\\src\\data"
+    ]
+  }
+}

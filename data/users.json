@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Alisher",
+    "email": "ali@example.com",
+    "password": "hashed_123456"
+  },
+  {
+    "id": 2,
+    "name": "vali",
+    "email": "vali@example.com",
+    "password": "hashed_default123"
+  },
+  {
+    "id": 4,
+    "name": "vali",
+    "email": "vali@example.com",
+    "password": "hashed_default123"
+  },
+  {
+    "id": 5,
+    "name": "vali",
+    "email": "",
+    "password": "hashed_default123"
+  }
+]
